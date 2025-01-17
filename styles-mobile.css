@@ -1,0 +1,167 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    list-style: none;
+    font-family: "Poppins", sans-serif;
+}
+
+body {
+    background-image: radial-gradient(#7f3d9e7c, #7224c0);
+    color: #fff;
+    font-size: 14px;
+    overflow-x: hidden;
+}
+
+header .menu-mob {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 15px;
+    background-color: #000;
+    color: #fff;
+    position: relative;
+    z-index: 10;
+}
+
+header img {
+    width: 150px;
+}
+
+.hidden {
+    display: none;
+}
+
+.menu-desk{
+    display: none;
+}
+
+.menu-toggle {
+    background: none;
+    border: none;
+    color: #fff;
+    font-size: 1.5em;
+    cursor: pointer;
+}
+
+.sidebar {
+    position: fixed;
+    top: 0;
+    right: -250px; /* Escondida fora da tela (lado direito) */
+    width: 250px;
+    height: 100%;
+    background-color: #111;
+    color: #fff;
+    box-shadow: -2px 0 5px rgba(0, 0, 0, 0.5);
+    transition: 0.3s ease-in-out;
+    z-index: 1000;
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+}
+
+.sidebar.visible {
+    right: 0; /* Desliza para dentro */
+}
+
+.sidebar .close-btn {
+    background: none;
+    border: none;
+    color: #fff;
+    font-size: 1.5em;
+    align-self: flex-end;
+    cursor: pointer;
+    margin-bottom: 20px;
+}
+
+.sidebar nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.sidebar nav ul li {
+    padding: 15px 0;
+    border-bottom: 1px solid #333;
+}
+
+.sidebar nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.sidebar nav ul li a:hover {
+    color: #beff1b;
+}
+
+/* Overlay */
+.overlay {
+    display: none;
+}
+
+.overlay.visible {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.397);
+    z-index: 999;
+    display: block;
+}
+
+.container {
+    width: 100%;
+    padding: 20px 10px;
+}
+
+.list .item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 40px;
+    text-align: center;
+}
+
+.list .item .content {
+    margin-bottom: 20px;
+}
+
+.list .item .content h2 {
+    font-size: 1.5em;
+    margin: 10px 0;
+    font-family: "League Gothic", sans-serif;
+}
+
+.list .item .content .description {
+    font-size: 12px;
+    color: #d9d9d9;
+    margin-bottom: 15px;
+}
+
+.list .item .content .informations {
+    border-radius: 20px;
+    height: 35px;
+    width: 100px;
+    text-transform: uppercase;
+    border: 2px solid #791fd3;
+    background-color: #beff1b;
+    color: #000;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.list .item .pc-img img {
+    width: 80%;
+    max-width: 200px;
+}
+
+.arrows {
+    display: none;
+}
+
+.indicators {
+    display: none;
+}
